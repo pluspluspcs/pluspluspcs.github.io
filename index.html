@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeonTech Computer Shop</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #121212;
+    }
+
+    header h1 {
+      color: #ff007f;
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 5px 10px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff007f;
+      color: #121212;
+      border-radius: 5px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #121212, #ff007f);
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      background-color: #ff007f;
+      color: #121212;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #fff;
+      color: #ff007f;
+    }
+
+    /* Product Showcase */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .product-card {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      color: #ff007f;
+      padding: 15px;
+    }
+
+    .product-card p {
+      color: #fff;
+      padding: 0 15px;
+    }
+
+    .product-card button {
+      background-color: #ff007f;
+      color: #121212;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 15px 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .product-card button:hover {
+      background-color: #fff;
+      color: #ff007f;
+    }
+
+    /* Services Section */
+    .services {
+      background-color: #1e1e1e;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .services h2 {
+      color: #ff007f;
+      margin-bottom: 20px;
+    }
+
+    .service-item {
+      display: inline-block;
+      width: 200px;
+      margin: 20px;
+      padding: 20px;
+      background-color: #121212;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .service-item:hover {
+      background-color: #ff007f;
+      color: #121212;
+    }
+
+    .service-item i {
+      font-size: 40px;
+      color: #ff007f;
+      margin-bottom: 15px;
+    }
+
+    .service-item p {
+      color: #fff;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: linear-gradient(135deg, #121212, #ff007f);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #1e1e1e;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .contact input:focus, .contact textarea:focus {
+      border: 2px solid #ff007f;
+    }
+
+    .contact button {
+      background-color: #ff007f;
+      color: #121212;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background-color: #fff;
+      color: #ff007f;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #121212;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #ff007f;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>NeonTech</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Upgrade Your Tech, Neon Style</h2>
+    <p>Find the best gear for gaming, work, and more.</p>
+    <a href="#" class="cta-button">Shop Now</a>
+  </section>
+
+  <!-- Product Showcase -->
+  <section class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product">
+      <h3>Gaming Laptop</h3>
+      <p>$999</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product">
+      <h3>Mechanical Keyboard</h3>
+      <p>$79</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product">
+      <h3>Gaming Mouse</h3>
+      <p>$49</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-item">
+      <i class="fas fa-cogs"></i>
+      <p>Custom PC Builds</p>
+    </div>
+    <div class="service-item">
+      <i class="fas fa-tools"></i>
+      <p>Repairs & Upgrades</p>
+    </div>
+    <div class="service-item">
+      <i class="fas fa-headset"></i>
+      <p>Consultations</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 NeonTech Computer Shop</p>
+    <div>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+</body>
+</html>
